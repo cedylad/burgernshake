@@ -8,6 +8,7 @@ class App{
     const DB_HOST = 'localhost';
 
     private static $database;
+    private static $title = "BURGER'N'SHAKE";
 
 
     public static function getDb(){
@@ -15,5 +16,13 @@ class App{
             self::$database =  new Database(self::DB_NAME, self::DB_USER, self::DB_PASSWORD, self::DB_HOST);
         }
         return self::$database;
+    }
+
+    public static function getTitle(){
+            return self::$title;
+    }
+
+    public static function setTitle($title){
+        self::$title = self::$title . ' | ' .$title;
     }
 }

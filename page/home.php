@@ -1,3 +1,6 @@
+<?php
+App\App::getTitle('ttt');
+?>
 <ul>
     <?php foreach(App\App::getDb()->query('SELECT * FROM burger', 'App\Table\Burger') as $burger): ?>
     <h2>
